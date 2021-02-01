@@ -4,7 +4,7 @@ require_relative 'gossip.rb'
 class ApplicationController < Sinatra::Base #application qui hérite de la base sinatra
     get '/' do
       erb :index, locals: {gossips: Gossip.all}
-      end
+    end
 
     get '/gossips/new/' do
         erb :new_gossip
@@ -17,15 +17,10 @@ class ApplicationController < Sinatra::Base #application qui hérite de la base 
     
     get '/gossips/all/' do
       erb :index, locals: {gossips: Gossip.all}
-      end
+    end
 
-      get '/gossips/:id/' do
-        
-        # matches "GET /hello/foo" and "GET /hello/bar"
-        # params['name'] is 'foo' or 'bar'
-       
-        erb :show
-      end
+    get '/gossips/:id/' do
+      erb :show
+    end
    
-
 end
