@@ -9,6 +9,6 @@
       Son auteur :  <%= Gossip.find(params["id"].to_i-1).author %><br/>
       Le contenu du potin :  <%= Gossip.find(params["id"].to_i-1).content %>     
     </p>
-  
+    <a href="/gossips/all/">tous les potins !</a>
   </body>
 </html>
