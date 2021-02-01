@@ -9,7 +9,7 @@ class Gossip
         @author = author
     end
 
-    def save #classifies the messages in an array
+    def save #classifies the messages in a csv file
         CSV.open("db/gossip.csv", "a+") do |csv|
             csv << [@author, @content]
         end
